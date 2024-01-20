@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport Management System</title>
+  <link rel="stylesheet" href="style.css">
+  
+  </head>
+<body>
+  <h1>Transport Management System</h1>
+
+
+
+  <!-- Customer Request Button -->
+    <h1>Transportation Request Form</h1>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" required>
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+  <button onclick="requestTransport()">Request Transport</button>
+<form id="transportationForm" action="http://localhost:3000/sendEmail" method="post">
+
+  <p>
+    <a href="mailto:collinskipngetich60@gmail.com?subject=Transportation%20Request&body=Dear%20Collins,%0D%0AI%20would%20like%20to%20request%20transportation%20for%20the%20following:%0D%0A%0D%0A- Name:%0D%0A- Contact:%0D%0A- Pickup Location:%0D%0A- Destination:%0D%0A- Additional Comments:%0D%0A%0D%0AThank%20you,%0D%0A[Your Name]">
+      Click here to send a transportation request
+    </a>
+  </p>
+<!-- Table for Transport Details -->
+<table>
+  <thead>
+    <tr>
+      <th>Type of Vehicle</th>
+      <th>Vehicle Number</th>
+      <th>Driver's Name</th>
+      <th>Goods (Tonnes)</th>
+      <th>Passengers per percenger</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody id="transportTableBody">
+    <tr>
+      <td>Car</td>
+      <td>KAS 456C</td>
+      <td>John Doe</td>
+      <td>1</td>
+      <td>2</td>
+      <td>ksh50</td>
+    </tr>
+    <tr>
+      <td>Truck</td>
+      <td>KAC 120S</td>
+      <td>Jane Smith</td>
+      <td>5</td>
+      <td>0</td>
+      <td>ksh100</td>
+    </tr>
+    <tr>
+      <td>Motorcycle</td>
+      <td>KDD 123A</td>
+      <td>Bob Johnson</td>
+      <td>0.5</td>
+      <td>1</td>
+      <td>ksh20</td>
+    </tr>
+    <tr>
+      <td>Bus</td>
+      <td>KCD 156D</td>
+      <td>Alice Williams</td>
+      <td>3</td>
+      <td>15</td>
+      <td>ksh75</td>
+    </tr>
+    <tr>
+      <td>Uber</td>
+      <td>JKL012</td>
+      <td>Chris Brown</td>
+      <td>1</td>
+      <td>0</td>
+      <td>ksh10</td>
+    </tr>
+  </tbody>
+</table>
+
+  <!-- Customer Feedback Section -->
+<p>
+    <a href="mailto:collinskipngetich60@gmail.com?subject=request for transport&body=Hello%20Collins,%0D%0AThis%20is%20a%20notification%20email.">
+      Click here to send a notification emaim
+    </a>
+  </p>
+<script>index.js</script>
+    </div>
+    </body>
+</html>
